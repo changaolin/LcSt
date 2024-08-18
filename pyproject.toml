@@ -1,0 +1,42 @@
+[project]
+name = "langchain-in-action"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "cal", email = "changaolin@gnail.com" }
+]
+dependencies = [
+    "gradio>=4.41.0",
+    "langchain>=0.2.14",
+    "langchain-community>=0.2.12",
+    "docx2txt>=0.8",
+    "pypdf>=4.3.1",
+    "openai>=1.41.0",
+    "qdrant-client>=1.11.0",
+    "tiktoken>=0.7.0",
+    "langchain-openai>=0.1.22",
+    "jupyter>=1.0.0",
+    "notebook>=7.2.1",
+    "langchain-ollama>=0.1.1",
+    "langchain-google-community>=1.0.7",
+    "google-api-core>=2.19.1",
+    "google>=3.0.0",
+    "google-api-python-client>=2.141.0",
+    "langgraph>=0.2.4",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_in_action"]
